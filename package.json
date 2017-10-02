@@ -22,6 +22,9 @@
     "presets": [
       "stage-0",
       "es2015"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
     ]
   },
   "lint-staged": {
@@ -36,6 +39,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.0",
     "babel-jest": "^21.0.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.6.1",
