@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/mapbox/mapbox-gl-redux#readme",
   "devDependencies": {
+    "@mapbox/babel-plugin-transform-jsxtreme-markdown": "^0.4.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.0.0",
     "babel-jest": "^21.0.2",

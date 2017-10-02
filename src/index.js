@@ -52,13 +52,17 @@ const prefixInternalActionType = actionType =>
   `internal-${ACTION_TYPE_PREFIX}${actionType}`;
 
 const mapMethodsByInternalActionType = mapMethods.reduce((memo, mapMethod) => {
-  return { ...memo, [prefixInternalActionType(mapMethod)]: mapMethod };
+  return Object.assign({}, memo, {
+    [prefixInternalActionType(mapMethod)]: mapMethod
+  });
 }, {});
 
 export const MapActionTypes = mapEvents
   .concat(specialCases)
   .reduce((memo, mapEvent) => {
-    return { ...memo, [mapEvent]: prefixOutgoingActionType(mapEvent) };
+    return Object.assign({}, memo, {
+      [mapEvent]: prefixOutgoingActionType(mapEvent)
+    });
   }, {});
 
 export const MapActionCreators = mapMethods
