@@ -3,6 +3,10 @@
 
 Tools for building Redux applications with Mapbox GL JS
 
+[![Build Status](https://travis-ci.com/mapbox/mapbox-gl-redux.svg?token=YkkMPyN1R9p9yTUwpzb5&branch=master)](https://travis-ci.com/mapbox/mapbox-gl-redux)
+
+---
+
 Add middleware to your Redux store and a control to your Mapbox GL JS map to
 sync your application state with the map's internally managed state, while
 maintaining clean one-way data-flow.
