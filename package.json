@@ -1,12 +1,16 @@
 {
   "name": "@mapbox/mapbox-gl-redux",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Tools for building Redux applications with Mapbox GL JS",
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "precommit": "lint-staged",
     "test": "npm run lint && jest",
     "lint": "eslint src test.js",
+    "prepublishOnly": "npm run build",
     "build": "rm -rf dist && babel src -d dist"
   },
   "repository": {
