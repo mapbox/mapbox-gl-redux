@@ -154,7 +154,7 @@ export function mapMiddleware({ dispatch }) {
   registeredDispatch = dispatch;
 
   return next => action => {
-    const map = registeredMaps[action.mapId];
+    const map = action.mapId && registeredMaps[action.mapId];
     if (!map) return next(action);
 
     switch (action.type) {
