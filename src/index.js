@@ -30,7 +30,8 @@ const mapEvents = [
   'rotate',
   'rotatestart',
   'rotateend',
-  'pitch'
+  'pitch',
+  'load'
 ];
 
 const ACTION_TYPE_PREFIX = 'mapbox-';
