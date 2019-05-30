@@ -120,6 +120,7 @@ These action types correspond directly with Mapbox GL JS events:
 - `rotatestart`
 - `rotateend`
 - `pitch`
+- `load`
 
 These ones correspond with the special action creators described above:
 

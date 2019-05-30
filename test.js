@@ -32,7 +32,8 @@ const mapEvents = [
   'rotate',
   'rotatestart',
   'rotateend',
-  'pitch'
+  'pitch',
+  'load'
 ];
 
 describe('MapboxGLRedux', () => {
@@ -63,6 +64,7 @@ describe('MapboxGLRedux', () => {
         rotatestart: 'mapbox-rotatestart',
         rotateend: 'mapbox-rotateend',
         pitch: 'mapbox-pitch',
+        load: 'mapbox-load',
         sync: 'mapbox-sync',
         setShowCollisionBoxes: 'mapbox-setShowCollisionBoxes',
         setShowTileBoundaries: 'mapbox-setShowTileBoundaries',
