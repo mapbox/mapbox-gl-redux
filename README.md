@@ -54,6 +54,8 @@ value from `map.getZoom()`.
 - `eventData`: The Mapbox GL JS map event data.
 - `type`: The action type.
 
+If you add a new map action creator or type, please also update the relevant tests and this README.
+
 ### `MapActionCreators`
 
 These action creators correspond directly with Mapbox GL JS methods:
@@ -128,3 +130,14 @@ These ones correspond with the special action creators described above:
 - `sync`
 - `setShowTileBoundaries`
 - `setShowCollisionBoxes`
+
+## Release
+
+First, create a [CHANGELOG](./CHANGELOG.md) entry for your release. Commit the entry followed by these commands:
+
+```
+npm version {major|minor|patch}
+git push
+git push --tags
+mbx npm publish
+```
