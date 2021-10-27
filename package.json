@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/mapbox-gl-redux",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Tools for building Redux applications with Mapbox GL JS",
   "main": "dist/index.js",
   "files": [
