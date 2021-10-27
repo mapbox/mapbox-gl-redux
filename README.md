@@ -75,6 +75,7 @@ These action creators correspond directly with Mapbox GL JS methods:
 - `flyTo`
 - `easeTo`
 - `stop`
+- `setProjection`
 
 ### Special actions
 

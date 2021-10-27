@@ -17,7 +17,8 @@ const mapMethods = [
   'jumpTo',
   'flyTo',
   'easeTo',
-  'stop'
+  'stop',
+  'setProjection'
 ];
 
 const mapEvents = [

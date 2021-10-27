@@ -19,7 +19,8 @@ const mapMethods = [
   'jumpTo',
   'flyTo',
   'easeTo',
-  'stop'
+  'stop',
+  'setProjection'
 ];
 
 const mapEvents = [
@@ -75,7 +76,7 @@ describe('MapboxGLRedux', () => {
 
   describe('MapboxGLRedux.MapActionCreators', () => {
     test('are the right ones', () => {
-      expect(Object.keys(MapboxGLRedux.MapActionCreators).length).toBe(21);
+      expect(Object.keys(MapboxGLRedux.MapActionCreators).length).toBe(22);
     });
 
     // They all do the same thing, so can all be tested with the same assertion,
