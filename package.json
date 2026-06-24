@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/mapbox-gl-redux",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Tools for building Redux applications with Mapbox GL JS",
   "main": "dist/index.js",
   "files": [
@@ -52,5 +52,8 @@
     "jest-cli": "^21.1.0",
     "lint-staged": "^4.1.3",
     "prettier": "^1.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
