@@ -3,8 +3,6 @@
 
 Tools for building Redux applications with Mapbox GL JS
 
-[![Build Status](https://travis-ci.com/mapbox/mapbox-gl-redux.svg?token=YkkMPyN1R9p9yTUwpzb5&branch=master)](https://travis-ci.com/mapbox/mapbox-gl-redux)
-
 ---
 
 Add middleware to your Redux store and a control to your Mapbox GL JS map to
@@ -131,13 +129,19 @@ These ones correspond with the special action creators described above:
 - `setShowTileBoundaries`
 - `setShowCollisionBoxes`
 
-## Release
+## Publishing
 
-First, create a [CHANGELOG](./CHANGELOG.md) entry for your release. Commit the entry followed by these commands:
+Pull Requests merged to `main` with conventional commit prefixes are automatically published to npm by the `NPM release` GitHub Actions workflow, as new major/minor/patch versions (`feat!:`/`feat:`/`fix:` respectively). When using "Squash and merge", ensure your PR title includes the conventional commit prefix; a `BREAKING CHANGE:` footer only counts if it ends up in the squash commit's body. Other prefixes (`chore:`, `docs:`, etc.) or no prefix don't trigger a release.
 
-```
-npm version {major|minor|patch}
-git push
-git push --tags
-mbx npm publish
-```
+Examples:
+- `fix: resolved issue with zoom actions` -> patch
+- `feat: added setFog action creator` -> minor
+- `feat!: renamed MapActionTypes` (requires consumer changes) -> major
+
+The workflow publishes via [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers/) (OIDC), so no npm token is needed. This requires an npm org admin to configure a trusted publisher for `@mapbox/mapbox-gl-redux` (GitHub Actions, workflow `npm-release.yml`, environment `npm-release`), and the `npm-release` GitHub Environment to exist in this repository. After publishing, the workflow creates a [GitHub Release](https://github.com/mapbox/mapbox-gl-redux/releases) with generated notes and comments the released version on the merged PRs.
+
+`package.json`'s `version` may be incremented manually if needed (for example, to skip a minor version), but you shouldn't normally need to touch it; the published npm version, not `package.json`, is the source of truth for what gets released next.
+
+### Pre-release versions on other branches
+
+For testing in downstream projects, you can manually trigger the "NPM release" workflow on a branch to publish a pre-release tagged with the short commit sha (e.g. `0.3.0-aa79c6a`) under the npm `prerelease` dist-tag, without affecting `latest`. Check the workflow results for the published version.

@@ -1,5 +1,7 @@
 # Changelog
 
+Starting after 0.3.0, release notes are published as [GitHub Releases](https://github.com/mapbox/mapbox-gl-redux/releases).
+
 ## 0.3.0
 
 - Add `setProjection` to `MapActionCreators`

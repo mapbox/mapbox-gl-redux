@@ -34,8 +34,7 @@
   "lint-staged": {
     "**/*.js": [
       "eslint",
-      "prettier --single-quote --write",
-      "git add"
+      "prettier --single-quote --write"
     ]
   },
   "homepage": "https://github.com/mapbox/mapbox-gl-redux#readme",
@@ -50,7 +49,10 @@
     "eventemitter3": "^2.0.3",
     "husky": "^0.14.3",
     "jest-cli": "^21.1.0",
-    "lint-staged": "^4.1.3",
+    "lint-staged": "^15.5.2",
     "prettier": "^1.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
