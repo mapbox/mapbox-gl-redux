@@ -3,8 +3,6 @@
 
 Tools for building Redux applications with Mapbox GL JS
 
-[![Build Status](https://travis-ci.com/mapbox/mapbox-gl-redux.svg?token=YkkMPyN1R9p9yTUwpzb5&branch=master)](https://travis-ci.com/mapbox/mapbox-gl-redux)
-
 ---
 
 Add middleware to your Redux store and a control to your Mapbox GL JS map to
@@ -131,13 +129,12 @@ These ones correspond with the special action creators described above:
 - `setShowTileBoundaries`
 - `setShowCollisionBoxes`
 
-## Release
+## Publishing
 
-First, create a [CHANGELOG](./CHANGELOG.md) entry for your release. Commit the entry followed by these commands:
+Pull Requests to `main` automatically publish a new version based on the PR's title prefix (`major:`, `minor:` or `patch:`) to the npmjs registry.
 
-```
-npm version {major|minor|patch}
-git push
-git push --tags
-mbx npm publish
-```
+The published version in the registry is the source of truth for the package version, but you can manually increment the `package.json`'s `version`.
+
+### Pre-release versions on other branches
+
+For testing in downstream projects, you can manually trigger the "NPM release" workflow on a branch to publish a pre-release tagged with the short commit sha (e.g. `0.3.0-aa79c6a`) under the npm `prerelease` dist-tag, without affecting `latest`. Check the workflow results for the published version.
